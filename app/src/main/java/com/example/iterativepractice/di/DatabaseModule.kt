@@ -15,7 +15,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Singleton
 
-
 @Module
 @InstallIn(SingletonComponent::class)
 object DatabaseModule {
@@ -28,7 +27,7 @@ object DatabaseModule {
             LocalDatabase::class.java,
             "local_database"
         )
-            .fallbackToDestructiveMigration()
+            //.fallbackToDestructiveMigration()
             .build()
     }
 

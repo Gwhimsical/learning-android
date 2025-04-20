@@ -43,11 +43,11 @@ class MenuItemsAdapter (
         }
     }
 
-    fun removeItem(id: Int) {
+    /*fun removeItem(id: Int) {
         val list = currentList.toMutableList()
         list.removeIf { it.id == id }
         submitList(list)
-    }
+    }*/
 
     class MenuDiffCallback : DiffUtil.ItemCallback<MenuItem>() {
         override fun areItemsTheSame(oldItem: MenuItem, newItem: MenuItem): Boolean {

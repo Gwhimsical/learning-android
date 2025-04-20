@@ -8,10 +8,8 @@ import com.example.iterativepractice.domain.usecases.common.GetAllProductsUseCas
 import com.example.iterativepractice.domain.usecases.product.ProductUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 /**

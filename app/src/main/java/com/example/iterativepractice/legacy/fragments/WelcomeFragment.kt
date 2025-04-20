@@ -24,6 +24,7 @@ class WelcomeFragment: Fragment() {
         val args = WelcomeFragmentArgs.fromBundle(requireArguments())
         val email = args.email
         val welcomeTextView: TextView = view.findViewById(R.id.welcome_message)
-        welcomeTextView.text = "Welcome, please confirm your email: $email!"
+        val msg = "Welcome, please confirm your email: $email!"
+        welcomeTextView.text = msg
     }
 }

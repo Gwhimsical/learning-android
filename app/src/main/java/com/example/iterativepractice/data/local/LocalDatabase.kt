@@ -14,7 +14,7 @@ abstract class LocalDatabase : RoomDatabase() {
     abstract fun productDao(): ProductDao
     abstract fun cartItemDao(): CartItemDao
 
-    companion object { // Singleton pattern
+    /*companion object { // Singleton pattern
         @Volatile private var INSTANCE: LocalDatabase? = null
 
         fun getDatabase(context: Context): LocalDatabase =
@@ -27,5 +27,5 @@ abstract class LocalDatabase : RoomDatabase() {
                     .fallbackToDestructiveMigration()
                     .build().also { INSTANCE = it }
             }
-    }
+    }*/
 }

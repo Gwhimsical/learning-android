@@ -65,9 +65,6 @@
             app:destination="@id/cartFragment" />
     </fragment>
 
-    <!-- TODO: implement menu & cart fragment & layout -->
-
-
     <fragment
         android:id="@+id/info_fab"
         android:name="com.example.iterativepractice.legacy.fragments.InfoFabFragment"
