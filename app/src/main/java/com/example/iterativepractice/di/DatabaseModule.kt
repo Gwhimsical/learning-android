@@ -4,15 +4,12 @@ import android.content.Context
 import androidx.room.Room
 import com.example.iterativepractice.data.local.LocalDatabase
 import com.example.iterativepractice.data.local.cartitem.CartItemDao
-import com.example.iterativepractice.data.local.pojo.CartItemWithProduct
 import com.example.iterativepractice.data.local.product.ProductDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import javax.inject.Singleton
 
 @Module
