@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.example.iterativepractice.legacy.fragments.LoginFragment"
+        android:label="@string/login_fragment_label"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_menu"
+            app:destination="@id/fragment_menu"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/fragment_login_to_sign_up_bottom_sheet"
+            app:destination="@id/sign_up_bottom_sheet" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/sign_up_bottom_sheet"
+        android:name="com.example.iterativepractice.legacy.dialog.SignUpBottomSheetDialog"
+        android:label="@string/sign_up_bottom_sheet_dialog_label"
+        tools:layout="@layout/layout_bottom_sheet_sign_up">
+        <action
+            android:id="@+id/action_sign_up_bottom_sheet_to_fragment_welcome"
+            app:destination="@id/fragment_welcome" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.iterativepractice.presentation.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.iterativepractice.presentation.product.ProductFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_product" />
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.iterativepractice.presentation.cart.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.iterativepractice.presentation.menu.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+
+    <!-- TODO: implement menu & cart fragment & layout -->
+
+
+    <fragment
+        android:id="@+id/info_fab"
+        android:name="com.example.iterativepractice.legacy.fragments.InfoFabFragment"
+        android:label="@string/info_fab_fragment_label"
+        tools:layout="@layout/fragment_info_fab">
+        <argument
+            android:name="pageId"
+            app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_welcome"
+        android:name="com.example.iterativepractice.legacy.fragments.WelcomeFragment"
+        android:label="@string/welcome_fragment_label"
+        tools:layout="@layout/fragment_welcome">
+        <argument
+            android:name="email"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_verification"
+        android:name="com.example.iterativepractice.legacy.fragments.MenuFragment"
+        android:label="@string/verification_fragment_label"
+        tools:layout="@layout/fragment_verification"
+        >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_menu"
+        android:name="com.example.iterativepractice.legacy.fragments.MenuFragment"
+        android:label="@string/menu_fragment_label"
+        tools:layout="@layout/fragment_menu_deprecated"
+        />
+
+</navigation>
